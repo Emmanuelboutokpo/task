@@ -1,0 +1,233 @@
+.contTashHigh{
+     border-radius: 10px;
+     border: 1px solid var(--bordure, rgba(157, 157, 157, 0.36));
+     opacity: 0.66;
+     background: rgba(66, 192, 77, 0.23);
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 1rem;
+     margin: 1.5rem 0;
+}
+
+.pubTask{
+     display: flex;
+     align-items: center;
+     margin: 1rem 0;
+}
+
+.pubTask p{
+     margin: 0 1rem 0 0;
+}
+
+.pubTask button{
+     display: flex;
+    padding: 8px 24px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 37px;
+    border: 1px solid var(--primaire-bleu, #002866);
+}
+
+.add{
+     display: flex;
+    padding: 6px 9px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 37px;
+    border: 1px solid var(--primaire-bleu, #002866);
+}
+.btn-edit{
+     border: none;
+     background: transparent;
+     font-size: 1.2rem;   
+}
+
+.peopleTask{
+     display: flex;
+     align-items: center;
+     margin-top: 1rem;
+}
+
+.pubTask p{
+     margin: 0 1rem 0 0;
+}
+
+.peopleImg img{
+  width: 1.5rem;
+  margin-right: -3px;
+}
+
+.taskIcons{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin-top: 7px;
+}
+
+.taskIcons svg{
+  margin: 0 8px 0 0;
+}
+
+.contTashHight{
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+}
+
+.taskContent {
+     width: 100%;
+     height: auto;
+     border-collapse: separate;
+     border-spacing: 1px;
+     table-layout: fixed;
+     -webkit-border-horizontal-spacing: 1px;
+     -webkit-border-vertical-spacing: 2px;
+ }
+
+.projetContent{
+  background-color: white;
+}
+.scrollable-content {
+     overflow-y: auto;
+     max-width: 200px; /* Limitez également la largeur si nécessaire */
+   }
+   
+.thcontent{
+     width: 198px;
+     max-width: 198px;
+     min-width: 198px;
+     padding: 5px; 
+     font-weight: normal;
+}
+
+.trContent{
+  background-color: #78786040;
+}
+
+.expandBtn{
+  background: #89303024;
+  border: none;
+  margin-right: 5px;   
+  padding: 5px;
+}
+
+.thcontent button{
+     background-color: transparent;
+     border: none;
+}
+
+ .aze{
+     display: flex;
+     align-items: center;
+     background-color: white;
+     padding: 0 5px;;
+ }
+
+ .blocDesc{
+     margin-left: 5px;
+    /*  border-left: 3px solid #6a3faf; */
+     border-bottom: 1px solid rgba(0, 0, 0, 0.241);
+     border-top: 1px solid rgba(0, 0, 0, 0.241);
+     border-right: 1px solid rgba(0, 0, 0, 0.241);
+     border-radius: 5px;
+     width: 150px;
+     padding: 0 5px;
+ }
+
+ .azf{
+     margin-left: 26px;
+     margin-top: -34px;
+  }
+
+.bloc{
+     margin-bottom: 1rem;
+}
+
+.bigContainer{
+      
+     padding: .6rem;
+     margin: 15px;
+     border-radius: 18.019px;
+     border: 0.901px solid var(--bordure, rgba(157, 157, 157, 0.36));
+     background: var(--second-blanc, #FFF);
+}
+
+.noTask{
+     width: 100%;
+     height: 300px;
+     object-fit: cover;
+}
+
+.noTasks{
+     font-weight: bold;
+    text-align: center;
+    display: block;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.isdragging{
+     border : 1px dotted 
+}
+
+.titleProj{
+     font-size : 1.1rem;
+     margin-bottom: 1rem;
+}
+
+.projetLiers{
+     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.5rem;
+}
+
+.projetLier span{
+     display: inline-flex;
+     padding: 2.568px 8.561px;
+     justify-content: center;
+     align-items: center;
+     gap: 8.561px;
+     color: #FF4A4A;
+     text-align: center;
+     border-radius: 26.539px;
+     border: 0.856px solid #FF4A4A;
+     background: rgba(255, 74, 74, 0.11); 
+     margin: 5px;
+}
+
+.imgProjet img{
+  width: 100%;
+  height: 5rem;
+  object-fit: cover;
+  border: 7px;
+}
+
+.imgProjet{
+     margin-bottom: 1rem;
+}
+
+.dateContainer{
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     margin-bottom: 1rem;
+}
+
+.comentsImg{
+    display: flex;
+     align-items: center;
+     justify-content: space-between;  
+     margin-top: 1rem;
+}
+
+.imgColabs img{
+     width: 2rem;
+    margin-right: -5px;
+}
+
+.peopleTask p{
+     margin-bottom: 0;
+     margin-right: 5px;
+}
