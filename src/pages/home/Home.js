@@ -9,9 +9,11 @@ const Home = () => {
   const [isEditing, setIsEditing] = useState(-1);
   const updatedTask = state.tasks.find((item) => item.id === isEditing);
   const updatedTasks = updatedTask !== undefined && updatedTask;
+  
   const [task_title, setTask_title] = useState(
     (isEditing && updatedTasks?.task_title) || ""
   );
+
   const [task_priority, setTask_priority] = useState(
     (isEditing && updatedTasks?.task_priority) || ""
   );
@@ -28,15 +30,18 @@ const Home = () => {
     (isEditing && updatedTasks?.task_status) || ""
   );
 
+ 
+
   const [show, setShow] = useState(false);
   const [err, setErr] = useState(null);
+  console.log(typeof isEditing === 'string');
 
   const handleSubmit = async (e) => {
+    console.log();
     e.preventDefault();
-    console.log(isEditing);
     if (task_title === "" || task_priority === "" || task_description === "" || task_started_date === "") {
       setErr("Veuillez renseigner tous les champs");
-    } else if (isEditing !== -1) {
+    } else if (typeof isEditing === 'string') {
       updateTask(isEditing, { task_title, task_priority, task_description, task_started_date, task_completed_date, task_status });
     } else {
       addTask({
@@ -68,7 +73,6 @@ const Home = () => {
     setIsEditing(id);
 
     const taskToEdit = state.tasks.find((task) => task.id === id);
-
     if (taskToEdit) {
       setTask_title(taskToEdit.task_title || "");
       setTask_priority(taskToEdit.task_priority || "");
@@ -95,7 +99,7 @@ const Home = () => {
       <Modal show={show} onHide={handleShow}>
         <Modal.Header>
           <Modal.Title style={{ textAlign: 'center!important' }}>
-            {(isEditing !== -1) ? "Modifier la tâche" : "Créer une tache"}
+            {(typeof isEditing === 'string') ? "Modifier la tâche" : "Créer une tache"}
           </Modal.Title>
           <button type="button" className="btn-close improveBtn" onClick={handleClose} aria-label="close"></button>
         </Modal.Header>
@@ -186,7 +190,7 @@ const Home = () => {
             <Button variant="secondary" onClick={handleClose}>
               Annuler
             </Button>
-            <Button type="submit" variant="primary">{(isEditing !== -1) ? "Modifier la tâche" : "Ajouter la tâche"}</Button>
+            <Button type="submit" variant="primary">{(typeof isEditing === 'string') ? "Modifier la tâche" : "Ajouter la tâche"}</Button>
           </Modal.Footer>
         </Form>
       </Modal>

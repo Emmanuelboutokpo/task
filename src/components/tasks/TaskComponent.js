@@ -11,7 +11,7 @@ import { Modal, Table } from 'react-bootstrap';
 const TaskComponent = ({ handleShow }) => {
   const statues = ['To do', 'Ouvert', 'En cours', 'En validation', 'Terminer'];
   const { state } = useTaskContext();
-
+   console.log(state);
   return (
     <div className="listTaskHigh">
       <div className="contTashHigh">
@@ -130,7 +130,6 @@ const TaskDet = ({ taskDet, id, handleShow }) => {
     setShow(false);
   };
 
-
   const [{ isDragging }, drag] = useDrag(() => ({
     type: 'tasks',
     item: { id: taskDet.id },
@@ -141,6 +140,7 @@ const TaskDet = ({ taskDet, id, handleShow }) => {
 
   const editUser = (id) => {
     handleShow(id)
+    console.log(id);
   }
 
   const onDeleteCategory = (index) => {
@@ -160,13 +160,13 @@ const TaskDet = ({ taskDet, id, handleShow }) => {
           </svg>
           {taskDet.task_completed_date === null ? Date.now : formatDateToCustomFormat(taskDet.task_completed_date)}
         </div>
-        <div className="coments">
+         <div className="coments">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" viewBox="0 0 16 14" fill="none">
             <path d="M5.65214 1.91133H14.8451M1.3064 1.74418L1.97497 2.41276L3.64641 0.741318M1.3064 6.7585L1.97497 7.42708L3.64641 5.75564M1.3064 11.7728L1.97497 12.4414L3.64641 10.77M5.65214 6.92565H14.8451M5.65214 11.94H14.8451" stroke="#646464" strokeWidth="1.25358" strokeLinecap="round" strokeLinejoin="round" />
           </svg> 9/20
-        </div>
+        </div>  
       </div>
-      <div className="comentsImg">
+      {/* <div className="comentsImg">
         <div className="imgColabs">
           <img src="./assets/img/img4.png" alt="x" />
         </div>
@@ -176,7 +176,7 @@ const TaskDet = ({ taskDet, id, handleShow }) => {
             <path d="M18.6994 19.8295C18.616 19.8406 18.5316 19.8406 18.4482 19.8295L13.7454 18.4027C11.9786 19.0698 10.0224 19.0291 8.28489 18.289C6.54737 17.5489 5.16266 16.1666 4.41956 14.4303C4.36877 14.3276 4.33971 14.2155 4.33421 14.101C4.32871 13.9866 4.34689 13.8722 4.3876 13.765C4.42831 13.6579 4.49068 13.5603 4.57081 13.4784C4.65094 13.3965 4.74712 13.3319 4.85332 13.2889C4.9566 13.2414 5.06829 13.215 5.1819 13.2111C5.2955 13.2073 5.40873 13.2261 5.51498 13.2665C5.62124 13.3068 5.71839 13.368 5.80077 13.4463C5.88315 13.5246 5.9491 13.6185 5.99479 13.7226C6.26611 14.3692 6.65291 14.961 7.13626 15.4691C7.93661 16.2607 8.95318 16.7979 10.0581 17.0132C11.163 17.2285 12.3069 17.1122 13.3459 16.679C13.534 16.611 13.7399 16.611 13.928 16.679L17.3524 17.7292L16.3023 14.3048C16.2343 14.1167 16.2343 13.9107 16.3023 13.7226C16.5982 13.026 16.7497 12.2765 16.7475 11.5196C16.7502 10.7755 16.6053 10.0383 16.3212 9.35054C16.0371 8.66281 15.6194 8.03826 15.0923 7.51302C14.8614 7.2212 14.6055 6.95003 14.3275 6.70258C14.2277 6.6427 14.1412 6.5631 14.0732 6.46864C14.0052 6.37418 13.9572 6.26685 13.932 6.1532C13.9069 6.03955 13.9053 5.92198 13.9271 5.80766C13.949 5.69334 13.9939 5.58469 14.0592 5.48833C14.1245 5.39197 14.2087 5.30993 14.3068 5.24722C14.4048 5.18452 14.5146 5.14247 14.6295 5.12364C14.7443 5.10481 14.8618 5.1096 14.9748 5.13772C15.0877 5.16583 15.1937 5.21668 15.2864 5.28715C15.6947 5.55073 16.0769 5.85269 16.4278 6.18892C17.0992 6.86421 17.634 7.66258 18.0031 8.54035C18.3903 9.44974 18.5884 10.4284 18.5852 11.4169C18.5828 12.2929 18.4283 13.1619 18.1286 13.9852L19.5555 18.688C19.6016 18.8183 19.6154 18.9579 19.5959 19.0947C19.5763 19.2315 19.5239 19.3616 19.4431 19.4737C19.3624 19.5859 19.2556 19.6769 19.1321 19.7388C19.0085 19.8008 18.8718 19.8319 18.7336 19.8295H18.6994Z" fill="#666666" />
           </svg> 6
         </div>
-      </div>
+      </div> */}
       <div className="projetLiers">
         <span onClick={() => handleShows(taskDet.id)}><FaEye /> Detail</span>
         <button
